@@ -25,7 +25,7 @@ The ”fashionnlp” package contains the following files:
 	- FBTaxonomy.csv: The initial FashionBrain taxonomy in a json format.
 	- ner_posts.csv: This file contains the output result of applying SENNA on the instagram posts.
 	- wikipediaKB.json: This file contains the wikipedia knowledge base of fashion items in a json format.
-- result folder:This folder contains the updated taxonomy
+- result folder: This folder contains the updated taxonomy
 
  
 
