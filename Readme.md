@@ -8,7 +8,7 @@ D2.1: "Named entity recognition and linking methods".
 
 ### Installation:
 ``` bash 
-git clone https://github.com/eXascaleInfolab/fashionNLP.git}
+git clone https://github.com/eXascaleInfolab/fashionNLP.git
 cd fashionNLP/
 ```
 
