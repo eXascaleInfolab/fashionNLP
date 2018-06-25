@@ -12,7 +12,7 @@ git clone https://github.com/eXascaleInfolab/fashionNLP.git}
 cd fashionNLP/
 ```
 
-### Description of the "CCD" package
+### Description of the "fashionNLP" package
 The ”fashionnlp” package contains the following files:
 - updateFBT.py: This code performs the following tasks:
 	1) Take a concept present in WikiKB as input. 
