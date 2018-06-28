@@ -10,6 +10,30 @@ import json
 import csv
 import Levenshtein
 
+def ner(input_file):
+    nlp = StanfordCoreNLP(r'./stanford-corenlp-full-2018-02-27')
+    influencer_text=open(input_file,'r')
+    with influencer_text as f:
+        lines = f.readlines()
+    
+
+    for i in range(0,len(lines)): 
+        sentence=lines[i]
+        tokenized_sentence=nlp.word_tokenize(sentence)
+        taged_sentence=nlp.pos_tag(sentence)
+        ner=nlp.ner(sentence)
+        print 'Tokenize:', nlp.word_tokenize(sentence)
+        print 'Part of Speech:', nlp.pos_tag(sentence)
+        print 'Named Entities:', nlp.ner(sentence)
+        tags=[item[1] for item in taged_sentence]
+        entity=[item[1] for item in ner]
+        rows = zip(tokenized_sentence,tags,entity)
+        with open("./input/ner_posts_standford.csv", "w") as f:
+            writer = csv.writer(f)
+            for row in rows:
+                writer.writerow(row)
+        f.close()
+
 def findchild(n,listofdescriptiveitems):
     for x in n['children']:
         listofdescriptiveitems.append(x['name'])
