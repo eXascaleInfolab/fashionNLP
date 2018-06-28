@@ -30,9 +30,12 @@ The ”fashionnlp” package contains the following files:
  
 
 ### Running the code 
+Download StandfordCoreNLP and add it in this directory.
+https://stanfordnlp.github.io/CoreNLP/history.html
 In order to run an experiment, the updateFBT.py file is used. 
-
 The corresponding command line to run the code is :
 ``` bash 
+pip install stanfordcorenlp
+pip install python-levenshtein
 python updateFBT.py
 ```
